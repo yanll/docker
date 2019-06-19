@@ -17,6 +17,7 @@ RUN yum provides '*/applydeltarpm' && \
     yum -y install maven && \
     yum -y install openresty && \
     yum -y install openresty-resty && \
+    yum -y install openssh* && \
     yum clean all
 
 EXPOSE 8080
