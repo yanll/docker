@@ -21,6 +21,13 @@ RUN yum provides '*/applydeltarpm' && \
     yum -y install openresty && \
     yum -y install openresty-resty && \
     yum -y install openssh* && \
+    yum -y install epel-release && \
+    wget https://bintray.com/kong/kong-rpm/download_file?file_path=centos/7/kong-1.2.0.el7.noarch.rpm
+    yum -y install kong-1.2.0.el7.noarch.rpm --nogpgcheck && \
+    yum -y install nodejs && \
+    yum -y install npm && \
+    npm install -g kong-dashboard && \
+    yum install -y lrzsz && \
     yum clean all
 
 EXPOSE 8080

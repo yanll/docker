@@ -81,3 +81,6 @@ docker stop $(docker ps -aq)
 docker rm $(docker ps -aq)
 删除所有的镜像
 docker rmi $(docker images -q)
+
+
+grep -rn -R -i "password" *
