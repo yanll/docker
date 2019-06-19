@@ -1,6 +1,9 @@
 FROM centos
 MAINTAINER https://github.com/yanll
 RUN yum provides '*/applydeltarpm' && \
+    yum -y install yum-utils && \
+    yum-config-manager --add-repo https://openresty.org/package/centos/openresty.repo && \
+    yum-config-manager --add-repo http://mirrors.aliyun.com/repo/Centos-7.repo && \
     yum -y install net-tools && \
     yum -y install deltarpm && \
     yum -y install readline-devel && \
