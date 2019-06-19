@@ -8,9 +8,10 @@ RUN yum -y install pcre-devel
 RUN yum -y install gcc
 RUN yum -y install net-tools
 RUN yum -y install openssl-devel
-RUN yum -y install curl vim
+RUN yum -y install curl
 RUN yum -y install git
-RUN yum -y install java maven
+RUN yum -y install java
+RUN yum -y install maven
 
 EXPOSE 8080
 
