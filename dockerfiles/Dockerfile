@@ -5,11 +5,14 @@ RUN yum provides '*/applydeltarpm' && \
     yum-config-manager --add-repo https://openresty.org/package/centos/openresty.repo && \
     yum-config-manager --add-repo http://mirrors.aliyun.com/repo/Centos-7.repo && \
     yum -y install net-tools && \
+    yum -y install telnet && \
     yum -y install deltarpm && \
     yum -y install readline-devel && \
     yum -y install pcre && \
     yum -y install pcre-devel && \
     yum -y install gcc && \
+    yum -y install gcc-c++ && \
+    yum -y install openssl && \
     yum -y install openssl-devel && \
     yum -y install curl && \
     yum -y install git && \
