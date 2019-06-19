@@ -1,6 +1,6 @@
 FROM centos
 MAINTAINER https://github.com/yanll
-#RUN yum provides '*/applydeltarpm' && \
+RUN yum provides '*/applydeltarpm' && \
 #    yum -y install net-tools && \
 #    yum -y install deltarpm && \
 #    yum -y install readline-devel && \
@@ -12,7 +12,7 @@ MAINTAINER https://github.com/yanll
 #    yum -y install git && \
 #    yum -y install java && \
 #    yum -y install maven && \
-#    yum  clean all
+    yum  clean all
 
 EXPOSE 8080
 
