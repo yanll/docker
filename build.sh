@@ -1,5 +1,5 @@
 echo 'build start'
 
-docker build -f dockerfiles/Dockerfile -t baseserver:1.0.0-SNAPSHOT .
+docker build -f dockerfiles/Dockerfile -t baseos:beta .
 
 echo 'build success'
