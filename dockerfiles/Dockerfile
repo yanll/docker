@@ -12,7 +12,7 @@ RUN yum provides '*/applydeltarpm' && \
     yum -y install git && \
     yum -y install java && \
     yum -y install maven && \
-    yum  clean all
+    yum clean all
 
 EXPOSE 8080
 
