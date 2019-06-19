@@ -17,7 +17,7 @@
                 <configuration>
                     <dockerHost>http://localdocker:2375</dockerHost>
                     <dockerDirectory>${project.basedir}/dockerfiles</dockerDirectory>
-                    <imageName>baseos:beta</imageName>
+                    <imageName>techforge/baseos:beta1</imageName>
                 </configuration>
             </plugin>
         </plugins>

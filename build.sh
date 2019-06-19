@@ -1,5 +1,5 @@
 echo 'build start'
 
-docker build -f dockerfiles/Dockerfile -t techforge/baseserver:1.0.0-SNAPSHOT .
+docker build -t techforge/baseserver:1.0.0-SNAPSHOT -f dockerfiles/Dockerfile .
 
 echo 'build success'
