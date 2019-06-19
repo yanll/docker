@@ -16,7 +16,8 @@ MAINTAINER https://github.com/yanll
 
 EXPOSE 8080
 
-ADD startup.sh /opt
+ADD pom.xml /opt/
+ADD startup.sh /opt/
 RUN chmod 755 /opt/startup.sh
 
 ENTRYPOINT ["/startup.sh"]
