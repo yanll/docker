@@ -6,12 +6,12 @@ RUN yum provides '*/applydeltarpm' && \
     yum -y install readline-devel && \
     yum -y install pcre && \
     yum -y install pcre-devel && \
-#    yum -y install gcc && \
-#    yum -y install openssl-devel && \
-#    yum -y install curl && \
-#    yum -y install git && \
-#    yum -y install java && \
-#    yum -y install maven && \
+    yum -y install gcc && \
+    yum -y install openssl-devel && \
+    yum -y install curl && \
+    yum -y install git && \
+    yum -y install java && \
+    yum -y install maven && \
     yum  clean all
 
 EXPOSE 8080
