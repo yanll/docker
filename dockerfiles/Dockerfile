@@ -19,4 +19,4 @@ EXPOSE 8080
 ADD startup.sh /opt/
 RUN chmod 755 /opt/startup.sh
 
-ENTRYPOINT ["/opt/startup.sh"]
+#ENTRYPOINT ["/opt/startup.sh"]
