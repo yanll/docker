@@ -1,6 +1,6 @@
 FROM centos
 MAINTAINER https://github.com/yanll
-RUN yum -y install readline-devel pcre pcre-devel openssl-devel gcc curl vim
+RUN yum -y install deltarpm readline-devel pcre pcre-devel openssl-devel gcc curl vim
 RUN yum -y install git java maven
 
 EXPOSE 8080
