@@ -1,7 +1,9 @@
 FROM centos
 MAINTAINER https://github.com/yanll
 RUN yum provides '*/applydeltarpm'
-RUN yum -y install deltarpm readline-devel pcre pcre-devel openssl-devel gcc curl vim net-tools
+RUN yum -y install deltarpm
+RUN yum -y install readline-devel pcre pcre-devel openssl-devel gcc
+RUN yum -y install curl vim net-tools
 RUN yum -y install git java maven
 
 EXPOSE 8080
