@@ -2,7 +2,7 @@ FROM centos
 MAINTAINER https://github.com/yanll
 RUN yum provides '*/applydeltarpm' && \
     yum -y install net-tools && \
-#    yum -y install deltarpm && \
+    yum -y install deltarpm && \
 #    yum -y install readline-devel && \
 #    yum -y install pcre && \
 #    yum -y install pcre-devel && \
