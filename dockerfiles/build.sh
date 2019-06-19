@@ -1,7 +1,5 @@
 echo 'build start'
-
 docker build -f Dockerfile -t techforge/baseos:beta .
-
 echo 'build success'
-    docker run -i -t -v /usr/local/software/:/mnt/software/ techforge/baseos:beta /bin/bash
+docker run -i -t -v /usr/local/software/:/mnt/software/ techforge/baseos:beta /bin/bash
 
