@@ -28,6 +28,7 @@ RUN yum provides '*/applydeltarpm' && \
     yum -y install npm && \
     npm install -g kong-dashboard && \
     yum install -y lrzsz && \
+    yum install -y lua && \
     yum clean all
 
 EXPOSE 8080
