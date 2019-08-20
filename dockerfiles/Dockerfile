@@ -37,3 +37,8 @@ ADD startup.sh /opt/
 RUN chmod 755 /opt/startup.sh
 
 #ENTRYPOINT ["/opt/startup.sh"]
+
+
+
+
+#wget https://bintray.com/kong/kong-rpm/download_file?file_path=centos/7/kong-1.2.0.el7.noarch.rpm
