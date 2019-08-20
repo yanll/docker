@@ -49,7 +49,8 @@ $ docker-enter <container> ls
 
 启动OS镜像：
 docker run -i -t -v /usr/local/software/:/mnt/software/ centos:7.2.1511 /bin/bash
-
+docker run -i -t -d techforge/open:beta /bin/bash
+docker run techforge/open:beta
 
 
 
