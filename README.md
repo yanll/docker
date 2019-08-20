@@ -19,7 +19,7 @@ docker run --name docker_mysql_iv -p 3304:3306 -e MYSQL_ROOT_PASSWORD=root -d my
 docker run --name docker_mysql_v -p 3305:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7
 
 
-docker run --name postgres1 -e POSTGRES_PASSWORD=root -p 5432:5432 -d docker.io/postgres
+docker run --name postgresql -e POSTGRES_PASSWORD=root -p 5432:5432 -d docker.io/postgres
 
 
 查看容器PID
