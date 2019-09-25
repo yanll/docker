@@ -15,6 +15,12 @@ kong start
 kong-dashboard start --basic-auth admin=admin --kong-url http://127.0.0.1:8001
 
 
+
+docker run -p 1337:1337 --name konga pantsel/konga
+7FD5BPnWm3RNvFK
+
+
+
 #创建服务
 curl -i -X POST \
 --url http://localhost:8001/services/ \
