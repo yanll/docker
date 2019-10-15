@@ -1,14 +1,13 @@
-docker run --name postgres_db -e POSTGRES_PASSWORD=root -p 5432:5432 -d postgres
+docker run --name postgres_db -e POSTGRES_PASSWORD=root -p 5432:5432 -d postgres:10.7
 sudo docker exec -it cid /bin/bash
 #本地登陆
-psql -U postgres -W postgres
+psql -U postgres;
 #创建用户
-create user impgusr with password 'impgpwd';
+create user hbgateway_usr with password 'hbgateway_pwd';
 #创建数据库并授予用户
-CREATE DATABASE impgdb owner impgusr;
+CREATE DATABASE hbgateway_db owner hbgateway_usr;
 #授权
-GRANT ALL PRIVILEGES ON DATABASE impgdb TO impgusr;
-#GRANT ALL PRIVILEGES ON TABLE 表名  TO 用户名;
+GRANT ALL PRIVILEGES ON DATABASE hbgateway_db TO hbgateway_usr;
 
 
 

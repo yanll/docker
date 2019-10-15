@@ -7,3 +7,12 @@ echo 'build success'
 #docker run -d -i -t <imageID> /bin/bash
 
 
+
+yum -y install ntp
+ntpdate time1.aliyun.com
+
+
+
+#清理
+docker system prune
+docker system prune -a
