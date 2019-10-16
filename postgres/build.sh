@@ -9,6 +9,11 @@ CREATE DATABASE hbgateway_db owner hbgateway_usr;
 #授权
 GRANT ALL PRIVILEGES ON DATABASE hbgateway_db TO hbgateway_usr;
 
+psql -U hbgateway_usr -d hbgateway_db;
+
+CREATE schema hbgateway_sch;
+
+
 
 
 
