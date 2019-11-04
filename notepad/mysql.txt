@@ -1,0 +1,27 @@
+
+set global interactive_timeout=30;  
+set global wait_timeout=30; 
+SET GLOBAL general_log = 'ON';
+SET GLOBAL general_log_file = '/var/log/mysql/general_log.log';
+
+
+show variables like '%timeout%'; 
+
+ select * from information_schema.`PROCESSLIST` where info is not null;
+
+
+-- 1、设置
+
+SET GLOBAL log_output = 'TABLE';
+SET GLOBAL general_log = 'ON';
+
+SET GLOBAL log_output = 'TABLE';
+SET GLOBAL general_log = 'OFF';
+
+-- 2、查询
+
+SELECT * from mysql.general_log ORDER BY event_time DESC;
+
+show variables like '%general_log%'
+
+

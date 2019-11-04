@@ -1,0 +1,78 @@
+ROOT用户启动Docker：
+service docker start/stop
+
+启动/关闭已有的容器
+docker statr/stop 容器ID/容器名称
+
+
+查看镜像：
+docker images
+
+启动Mysql：
+docker run --name docker_mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7
+docker run --name docker_mysql_i -p 3301:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7
+docker run --name docker_mysql_ii -p 3302:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7
+docker run --name docker_mysql_iii -p 3303:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7
+docker run --name docker_mysql_iv -p 3304:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7
+docker run --name docker_mysql_v -p 3305:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7
+
+Mysql_8 ：客户端连接caching-sha2-password问题
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE NEVER; #修改加密规则
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'; #更新一下用户的密码
+ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'root';
+FLUSH PRIVILEGES; #刷新权限
+
+
+查看容器PID
+docker inspect --format "{{ .State.Pid }}" 容器ID
+
+进入容器：
+nsenter --target $PID --mount --uts --ipc --net --pid
+
+
+下载.bashrc_docker，并将内容放到 .bashrc 中。
+
+$ wget -P ~ https://github.com/yeasy/docker_practice/raw/master/_local/.bashrc_docker;
+$ echo "[ -f ~/.bashrc_docker ] && . ~/.bashrc_docker" >> ~/.bashrc; source ~/.bashrc
+
+例如 docker-pid 可以获取某个容器的 PID；而 docker-enter 可以进入容器或直接在容器内执行命令。
+
+$ echo $(docker-pid <container>)
+$ docker-enter <container> ls
+
+
+删除一个容器：docker rm 容器ID
+删除一个镜像：docker rmi 镜像ID
+
+
+
+
+
+启动OS镜像：
+docker run -i -t -v /usr/local/software/:/mnt/software/ centos:7.2.1511 /bin/bash
+
+
+
+
+redis 启动：
+docker run --name docker_dao_redis_master_init -p -t -i -d 6379:6379 dao-redis:master-init
+docker run --name docker_redis -p -t -i -d 6379:6379 redis:latest
+
+mongodb 启动：
+docker run --name docker_mongo -p -t -i -d 27017:27017 mongo:latest
+
+
+
+启动Rabbitmq
+docker run -d -p 5672:5672 -p 15672:15672 --name docker_rabbitmq docker.io/rabbitmq:3.6.5
+
+
+
+保存镜像
+docker commit -a "yll.com" -m "yllimg-centos-i" 4f0fbe6a401a  centos_yll-i:v1 
+
+
+docker run -ti busybox
+
+
+docker run --privileged=true -d --name zookeeper --publish 2181:2181  -d zookeeper:latest
