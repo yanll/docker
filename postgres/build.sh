@@ -14,7 +14,7 @@ psql -U hbgateway_usr -d hbgateway_db;
 CREATE schema hbgateway_sch;
 
 
-
+#GRANT USAGE ON SCHEMA hbgateway_sch TO hbgateway_usr;
 
 
 SELECT * FROM pg_database;
