@@ -76,3 +76,7 @@ docker run -ti busybox
 
 
 docker run --privileged=true -d --name zookeeper --publish 2181:2181  -d zookeeper:latest
+
+
+
+docker run -i -t -v /usr/local/software/:/mnt/software/  artifact.paas.yp/sys-docker-base-local/centos:7.5.1804 /bin/bash
