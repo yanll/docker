@@ -80,3 +80,6 @@ docker run --privileged=true -d --name zookeeper --publish 2181:2181  -d zookeep
 
 
 docker run -i -t -v /usr/local/software/:/mnt/software/  artifact.paas.yp/sys-docker-base-local/centos:7.5.1804 /bin/bash
+
+
+docker run --env YP_DATA_CENTER=QA -i -t -v /usr/local/software/:/mnt/software/  artifact.paas.yp/yeepay-docker-dev-local/hbird-gateway:201911181427_e73c3981 /bin/bash
