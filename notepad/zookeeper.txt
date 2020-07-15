@@ -1,5 +1,0 @@
-啓動容器
-docker run --name docker_zookeeper -p 21818:2181 -d jplock/zookeeper:3.4.6
-
-进入容器
-docker exec -it docker_zookeeper /bin/bash
